@@ -21,7 +21,6 @@ public class FlappyWave extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture background;
 	Texture gameOverBackground;
-	Texture gameover;
 	Texture topTube;
 	Texture bottomTube;
 	Texture[] birds;
@@ -43,7 +42,7 @@ public class FlappyWave extends ApplicationAdapter {
 	float velocity = 0;
 	float tubeVelocity = 4;
 	float distanceBetweenTubes;
-	float endgameTextWidth, gameOverTextWidth, startGameTextWidth, highScoreTextWidth;
+	float endgameTextWidth, startGameTextWidth, highScoreTextWidth;
 	float[] tubeX = new float[numberOfTubes];
 	float[] tubeOffset = new float[numberOfTubes];
 
@@ -68,7 +67,6 @@ public class FlappyWave extends ApplicationAdapter {
 
 	final String END_GAME_MESSAGE = "R E S T A R T";
 	final String START_GAME_MESSAGE = "F I G H T !";
-	final String GAME_OVER_MESSAGE = "G A M E O V E R : (";
 	final String HIGH_SCORE_MESSAGE = "R E C O R D : ";
 
 	@Override
@@ -179,7 +177,6 @@ public class FlappyWave extends ApplicationAdapter {
 			if (birdY > 0) {
 				velocity = velocity + gravity;
 				birdY -= velocity;
-
 			} else {
 				gameState = 2;
 			}
