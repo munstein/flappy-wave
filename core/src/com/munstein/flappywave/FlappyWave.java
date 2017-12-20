@@ -72,7 +72,7 @@ public class FlappyWave extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		background = new Texture("bg5.jpg");
+		background = new Texture("bg.jpg");
 		gameOverBackground = new Texture("gameover.png");
 
 		birdCircle = new Circle();
@@ -104,6 +104,7 @@ public class FlappyWave extends ApplicationAdapter {
 
 		topTube = new Texture("can.png");
 		bottomTube = new Texture("can.png");
+
 		maxTubeOffset = Gdx.graphics.getHeight() / 2 - gap / 2 - 100;
 		randomGenerator = new Random();
 		distanceBetweenTubes = Gdx.graphics.getWidth() * 3 / 4;
@@ -235,7 +236,7 @@ public class FlappyWave extends ApplicationAdapter {
 
 		endtime = endtime == 0 ? TimeUtils.millis() : endtime;
 
-		if(TimeUtils.timeSinceMillis(endtime)>900)
+		if(TimeUtils.timeSinceMillis(endtime)>333)
 			if (Gdx.input.justTouched()) {
 				gameState = 1;
 				startGame();
