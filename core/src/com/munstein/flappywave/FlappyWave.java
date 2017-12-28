@@ -111,7 +111,6 @@ public class FlappyWave extends ApplicationAdapter {
 		topTubeRectangles = new Rectangle[numberOfTubes];
 		bottomTubeRectangles = new Rectangle[numberOfTubes];
 
-		Gdx.app.log("Score", preferences.getInteger(PREFERENCES_HIGHSCORE)+"");
 
 		GlyphLayout layout = new GlyphLayout(endGameMessage, END_GAME_MESSAGE);
 		endgameTextWidth = layout.width;
